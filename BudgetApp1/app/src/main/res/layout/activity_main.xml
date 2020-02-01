@@ -11,13 +11,23 @@
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="337dp"
-        android:text="Login" />
+        android:layout_marginTop="189dp"
+        android:background="#2196F3"
+        android:text="Make an Account"
+        android:textColor="@android:color/white"
+        android:textSize="40dp"
+        android:textStyle="bold" />
 
     <Button
         android:id="@id/button"
-        android:layout_width="wrap_content"
+        android:layout_width="175dp"
         android:layout_height="wrap_content"
-        android:text="open activity 2" />
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="165dp"
+        android:background="#03A9F4"
+        android:text="Login"
+        android:textColor="@android:color/white"
+        android:textSize="24dp"/>
 
 </RelativeLayout>
