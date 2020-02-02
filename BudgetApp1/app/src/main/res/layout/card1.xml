@@ -3,21 +3,33 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    app:cardCornerRadius="4dp">
+    app:cardCornerRadius="6dp"
+    app:cardUseCompatPadding="true">
+
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_margin="4dp">
 
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginLeft="4dp"
+            android:padding="2dp"/>
+
         <TextView
             android:id="@+id/textView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Gong Cha"
-            android:textSize="20sp"
+            android:textSize="35sp"
             android:textStyle="bold"
             android:textColor="@android:color/black"
+            android:layout_marginStart="65dp"
+            android:layout_marginTop="8dp"
             android:layout_alignParentTop="true"/>
 
         <TextView
@@ -25,8 +37,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/textView"
-            android:text="Budget: $15.00       Spent: $6.56       Remaining: $8.44"
-            android:textSize="15sp" />
+            android:text="Budget: $0.00       Spent: $0.00     Remaining: $0.00"
+            android:layout_marginLeft="65dp"
+            android:layout_marginBottom="15dp"
+            android:textSize="20sp" />
 
 
     </RelativeLayout>

@@ -3,6 +3,7 @@ package com.example.budgetapp1;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -15,12 +16,13 @@ public class ExampleAdapter extends RecyclerView.Adapter<ExampleAdapter.ExampleV
     private ArrayList<Card> mCardList;
     public static class ExampleViewHolder extends RecyclerView.ViewHolder{
 
-        //public ImageView mImageView;
+        public ImageView mImageView;
         public TextView mTextView1;
         public TextView mTextView2;
 
         public ExampleViewHolder(View itemView){
             super(itemView);
+            mImageView = itemView.findViewById(R.id.imageView);
             mTextView1 = itemView.findViewById(R.id.textView);
             mTextView2 = itemView.findViewById(R.id.textView2);
         }
@@ -42,6 +44,7 @@ public class ExampleAdapter extends RecyclerView.Adapter<ExampleAdapter.ExampleV
     public void onBindViewHolder(@NonNull ExampleViewHolder holder, int position) {
         Card currentItem = mCardList.get(position);
 
+        holder.mImageView.setImageResource(currentItem.getImageResource());
         holder.mTextView1.setText(currentItem.getText1());
         holder.mTextView2.setText(currentItem.getText2());
 
