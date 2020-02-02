@@ -11,7 +11,9 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true">
 
         <EditText
             android:id="@+id/et_sum"
@@ -29,11 +31,11 @@
             android:visibility="invisible" />
 
         <TextView
+            android:id="@+id/tv_result"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:id="@+id/tv_result"
-            android:layout_centerInParent="true" />
+            android:layout_centerInParent="true"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
 
         <Button
             android:id="@+id/update_budget"
@@ -43,10 +45,12 @@
             android:layout_alignParentEnd="true"
             android:layout_alignParentRight="true"
             android:layout_gravity="center_horizontal"
-            android:layout_marginTop="680dp"
-            android:layout_marginEnd="13dp"
-            android:layout_marginRight="13dp"
-            android:text="Update" />
+            android:layout_marginTop="558dp"
+            android:layout_marginEnd="26dp"
+            android:layout_marginRight="26dp"
+            android:background="#03A9F4"
+            android:text="Update Budget"
+            android:textColor="#FFFFFF" />
 
         <EditText
             android:id="@+id/et_input3"
@@ -92,22 +96,22 @@
 
         <TextView
             android:id="@+id/tv_title"
-            android:layout_width="321dp"
+            android:layout_width="262dp"
             android:layout_height="wrap_content"
             android:layout_alignParentStart="true"
             android:layout_alignParentLeft="true"
             android:layout_alignParentTop="true"
             android:layout_gravity="center_horizontal"
-            android:layout_marginStart="23dp"
-            android:layout_marginLeft="23dp"
-            android:layout_marginTop="29dp"
-            android:text="Store Specific Budget"
+            android:layout_marginStart="48dp"
+            android:layout_marginLeft="48dp"
+            android:layout_marginTop="31dp"
+            android:text="Gong Cha Budget"
             android:textColor="#03A9F4"
             android:textSize="32dp"
             android:textStyle="bold" />
 
         <EditText
-            android:id="@+id/date1"
+            android:id="@+id/date2"
             android:layout_width="153dp"
             android:layout_height="wrap_content"
             android:layout_alignParentStart="true"
@@ -147,6 +151,20 @@
             android:ems="10"
             android:inputType="date"
             android:text="Enter date" />
+
+        <Button
+            android:id="@+id/add_purchase"
+            android:layout_width="149dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="558dp"
+            android:layout_marginEnd="202dp"
+            android:layout_marginRight="202dp"
+            android:background="#2196F3"
+            android:text="Add Purchase"
+            android:textColor="#FFFFFF" />
     </RelativeLayout>
 
 </RelativeLayout>

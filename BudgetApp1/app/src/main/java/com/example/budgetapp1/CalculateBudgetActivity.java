@@ -2,8 +2,10 @@ package com.example.budgetapp1;
 
 import android.os.Bundle;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.RelativeLayout;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -15,10 +17,12 @@ public class CalculateBudgetActivity extends AppCompatActivity {
     EditText et_input3Input;
 
     Button budget_update;
+    Button add_purchase;
     private EditText num1Input;
     private EditText num2Input;
     private EditText num3Input;
     private EditText sumInput;
+    private ViewGroup mainLayout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,8 +49,23 @@ public class CalculateBudgetActivity extends AppCompatActivity {
             }
         });
     }
+    private void addEditView() {
+        RelativeLayout ri=new RelativeLayout(this);
+        EditText et=new EditText(this);
+        Button b=new Button(this);
+
+        b.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                int pos=(Integer) v.getTag();
+                mainLayout.removeViewAt(pos);
+            }
+        });
+    }
+}
+
 
 //    private void showToast(String text) {
 //        Toast.makeText(MainActivity.this, text, Toast.LENGTH_SHORT).show();
 //    }
-}
+//}
