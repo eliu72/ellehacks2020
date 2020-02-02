@@ -1,53 +1,55 @@
 package com.example.budgetapp1;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RelativeLayout;
+import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 public class CalculateBudgetActivity extends AppCompatActivity {
-    int num1, num2, num3;
 
-    EditText et_input1Input;
-    EditText et_input2Input;
+    int num1, num2, num3;
+    private Button button;
+
+    //EditText et_input1Input;
+    //EditText et_input2Input;
     EditText et_input3Input;
 
     Button budget_update;
-    Button add_purchase;
-    private EditText num1Input;
-    private EditText num2Input;
+    //Button add_purchase;
+    //private EditText num1Input;
+    //private EditText num2Input;
     private EditText num3Input;
     private EditText sumInput;
-    private ViewGroup mainLayout;
+    //private ViewGroup mainLayout;
+
+    TextView tv;
+    String st;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_store_specific_budget);
 
-        num1Input = findViewById(R.id.et_input1);
-        num2Input = findViewById(R.id.et_input2);
         num3Input = findViewById(R.id.et_input3);
 
-        sumInput = findViewById(R.id.et_sum);
+        tv=findViewById(R.id.tv_title);
+        st=getIntent().getExtras().getString("Store Name");
+        tv.setText(st);
 
-        budget_update = (Button) findViewById(R.id.update_budget);
-        budget_update.setOnClickListener(new View.OnClickListener() {
+        button = (Button) findViewById(R.id.home);
+        button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                num1 = Integer.valueOf(et_input1Input.getText().toString());
-                num2 = Integer.valueOf(et_input2Input.getText().toString());
-                num3 = Integer.valueOf(et_input3Input.getText().toString());
-
-                int result = num1 + num2 + num3;
-                sumInput.setVisibility(View.VISIBLE);
-                sumInput.setText(result);
+                openBudgetAccount();
             }
         });
+
     }
     private void addEditView() {
         RelativeLayout ri=new RelativeLayout(this);
@@ -58,9 +60,15 @@ public class CalculateBudgetActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 int pos=(Integer) v.getTag();
-                mainLayout.removeViewAt(pos);
+                //mainLayout.removeViewAt(pos);
             }
         });
+    }
+
+    public void openBudgetAccount(){
+        Intent intent = new Intent(CalculateBudgetActivity.this, BudgetAccount.class);
+        //startActivity(intent);
+        finish();
     }
 }
 
