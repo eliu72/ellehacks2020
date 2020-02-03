@@ -36,7 +36,7 @@ public class CalculateBudgetActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_store_specific_budget);
 
-        num3Input = findViewById(R.id.et_input3);
+        //num3Input = findViewById(R.id.et_input3);
 
         tv=findViewById(R.id.tv_title);
         st=getIntent().getExtras().getString("Store Name");

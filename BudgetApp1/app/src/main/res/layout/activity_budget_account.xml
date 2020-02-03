@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#5BCEFF"
+    android:background="@drawable/gradient"
     android:orientation="vertical"
     tools:context=".MainActivity">
 
@@ -12,8 +12,8 @@
         android:id="@+id/recyclerView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginBottom="100dp"
-        android:background="#5BCEFF"
+        android:layout_marginTop="170dp"
+        android:background="@android:color/transparent"
         android:padding="4dp"
         android:scrollbars="vertical" />
 
@@ -26,13 +26,40 @@
         android:layout_marginStart="15dp"
         android:layout_marginBottom="25dp" /> -->
 
+    <TextView
+        android:id="@+id/head"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Monthly Plan"
+        android:background="@android:color/transparent"
+        android:textSize="45dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:fontFamily="sans-serif-medium"
+        android:textColor="#FFFFFF"
+        android:layout_marginLeft="20dp"
+        android:textStyle="bold"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="20dp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Total Budget: $200.00\nSpent:$151.33\nRemaining:$48.67"
+        android:background="@android:color/transparent"
+        android:textSize="20dp"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/head"
+        android:fontFamily="sans-serif-medium"
+
+        android:textColor="#FFFFFF"
+        android:layout_marginLeft="20dp"/>
+
     <Button
         android:id="@+id/button_insert"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentRight="true"
         android:layout_alignParentBottom="true"
-        android:background="#036FFF"
         android:text="Add" />
     <!--android:layout_alignBottom="@id/edittext_insert"
     android:layout_toEndOf="@id/edittext_insert"/>-->
